@@ -15,9 +15,13 @@ while app_is_running:
   screen.blit(background_image, (0, -200))
   screen.blit(game.player.image, game.player.rect)
 
-  # Display all projectiles in the group
+  # Projectiles' moving
   for projectile in game.player.all_projectiles:
     projectile.move()
+
+  # Monsters' moving
+  for monster in game.all_monsters:
+    monster.forward()
   
   # Draw sprites on the screen
   game.player.all_projectiles.draw(screen)

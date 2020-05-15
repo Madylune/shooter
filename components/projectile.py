@@ -25,6 +25,10 @@ class Projectile(pygame.sprite.Sprite):
     self.rect.x += self.velocity
     self.rotate()
 
+    # Check collision with monster
+    if not self.player.game.check_collision(self, self.player.game.all_monsters):
+      self.remove()
+
     # Remove projectile outside
     if self.rect.x > 1080:
       self.remove()

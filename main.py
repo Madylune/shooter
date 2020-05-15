@@ -15,6 +15,8 @@ while app_is_running:
   screen.blit(background_image, (0, -200))
   screen.blit(game.player.image, game.player.rect)
 
+  game.player.update_health_bar(screen)
+
   # Projectiles' moving
   for projectile in game.player.all_projectiles:
     projectile.move()

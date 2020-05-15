@@ -22,6 +22,7 @@ while app_is_running:
   # Monsters' moving
   for monster in game.all_monsters:
     monster.forward()
+    monster.update_health_bar(screen)
   
   # Draw sprites on the screen
   game.player.all_projectiles.draw(screen)

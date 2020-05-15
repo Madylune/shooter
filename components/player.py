@@ -3,7 +3,7 @@ from components.projectile import Projectile
 
 class Player(pygame.sprite.Sprite):
   def __init__(self):
-    super().__init__() 
+    super().__init__() # Inits the super class from parent (Sprite)
     self.health = 100
     self.max_health = 100
     self.attack = 10

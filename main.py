@@ -18,8 +18,10 @@ while app_is_running:
   # Display all projectiles in the group
   for projectile in game.player.all_projectiles:
     projectile.move()
-    
+  
+  # Draw sprites on the screen
   game.player.all_projectiles.draw(screen)
+  game.all_monsters.draw(screen)
 
   # Player's moving
   if game.pressed.get(pygame.K_RIGHT) and game.player.rect.x + game.player.rect.width < screen.get_width():
